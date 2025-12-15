@@ -107,7 +107,7 @@ export default function MovieCard({ movie, compact = false }) {
               )}
             </div>
 
-            {/* Mô tả ngắn: chỉ hiện rõ khi hover (đúng yêu cầu "có thêm thông tin") */}
+            {}
             {short && (
               <p
                 className={`
