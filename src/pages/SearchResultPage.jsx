@@ -73,7 +73,7 @@ export default function SearchResultPage() {
     return (
       <main className="mx-auto max-w-6xl px-4 py-6">
         <p className="text-sm text-slate-500 dark:text-slate-300">
-          Nhập từ khóa để tìm kiếm phim.
+          Nhập từ khóa .
         </p>
       </main>
     )
@@ -127,7 +127,7 @@ export default function SearchResultPage() {
 
       {!loading && !error && results.length === 0 && (
         <p className="text-sm text-slate-500 dark:text-slate-300">
-          Không có phim nào phù hợp.
+          Không có phim phù hợp.
         </p>
       )}
 
