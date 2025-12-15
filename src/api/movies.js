@@ -60,7 +60,6 @@ export async function getMovieReviews(movieId, params = {}) {
     pagination: res?.pagination || null,
   }
 }
-// Lấy credits (đạo diễn + diễn viên) từ chi tiết phim
 export async function getMovieCredits(id) {
   const movie = await getMovieDetail(id)
   return {
@@ -69,10 +68,7 @@ export async function getMovieCredits(id) {
   }
 }
 
-/**
- * GET /persons
- * -> { data: PersonCard[], pagination }
- */
+
 export async function getPersons(params = {}) {
   const res = await apiFetch(`/persons${buildQuery(params)}`)
   return {
