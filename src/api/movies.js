@@ -1,4 +1,3 @@
-// src/api/movies.js
 import { apiFetch } from './client'
 
 function buildQuery(params) {
@@ -19,6 +18,7 @@ export async function getMovies(params = {}) {
     pagination: res?.pagination || null,
   }
 }
+
 
 
 
