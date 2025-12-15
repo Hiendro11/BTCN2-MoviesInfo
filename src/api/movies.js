@@ -36,38 +36,25 @@ export async function searchMovies(params = {}) {
   }
 }
 
-/**
- * GET /movies/top-rated
- * -> { category, data: Movie[], pagination }
- * UI chỉ cần mảng nên trả luôn mảng
- */
+
 export async function getTopRatedMovies(params = {}) {
   const res = await apiFetch(`/movies/top-rated${buildQuery(params)}`)
   return res?.data || []
 }
 
-/**
- * GET /movies/most-popular
- * -> { title, data: Movie[], pagination }
- */
+
 export async function getMostPopularMovies(params = {}) {
   const res = await apiFetch(`/movies/most-popular${buildQuery(params)}`)
   return res?.data || []
 }
 
-/**
- * GET /movies/{id}
- * -> Movie detail (object bạn dán ở cuối)
- */
+
 export async function getMovieDetail(id) {
   if (!id) throw new Error('movie id is required')
   return apiFetch(`/movies/${id}`)
 }
 
-/**
- * GET /movies/{movieId}/reviews
- * -> { movie_id, movie_title, data: Review[], pagination }
- */
+
 export async function getMovieReviews(movieId, params = {}) {
   if (!movieId) throw new Error('movieId is required')
   const res = await apiFetch(
