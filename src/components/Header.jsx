@@ -65,7 +65,7 @@ export default function Header() {
             </button>
           </form>
 
-          {/* Nav links nhỏ bên phải */}
+          {}
           <nav className="ml-1 flex items-center gap-2 text-[11px] text-slate-700 dark:text-slate-200">
             <Link to="/" className="px-2 hover:text-sky-500">
               Home
