@@ -25,12 +25,11 @@ export default function MovieCard({ movie, compact = false }) {
     movie.release_year ||
     (typeof movie.releaseDate === 'string' ? movie.releaseDate.slice(0, 4) : '')
 
-  // Hàng ngang: aspect 16/9, hover mạnh
-  // Các chỗ khác: aspect linh hoạt hơn, hover nhẹ
+
   const aspect = compact ? 'aspect-[16/9]' : 'aspect-[2/3] md:aspect-[16/9]'
 
   const hoverClasses = compact
-    ? // hiệu ứng giống video: phóng to, nhô lên, z-index cao, shadow mạnh
+    ? 
       'hover:z-30 hover:scale-[1.1] hover:-translate-y-6 hover:shadow-[0_20px_45px_rgba(15,23,42,0.9)]'
     : 'hover:z-10 hover:scale-[1.03] hover:-translate-y-2 hover:shadow-2xl'
 
@@ -137,7 +136,7 @@ export default function MovieCard({ movie, compact = false }) {
           rounded-full bg-black/55 text-xs text-slate-100 backdrop-blur
           transition-colors hover:bg-sky-500 hover:text-white
         `}
-        aria-label={isFav ? 'Bỏ khỏi danh sách yêu thích' : 'Thêm vào danh sách yêu thích'}
+        aria-label={isFav ? 'Loại khỏi danh sách yêu thích' : 'Thêm vào danh sách yêu thích'}
       >
         {isFav ? '♥' : '♡'}
       </button>
