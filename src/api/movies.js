@@ -11,10 +11,7 @@ function buildQuery(params) {
   return qs ? `?${qs}` : ''
 }
 
-/**
- * GET /movies
- * -> { data: Movie[], pagination }
- */
+
 export async function getMovies(params = {}) {
   const res = await apiFetch(`/movies${buildQuery(params)}`)
   return {
