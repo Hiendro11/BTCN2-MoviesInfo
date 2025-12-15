@@ -23,11 +23,14 @@ export async function getMovies(params = {}) {
   }
 }
 
-/**
- * GET /movies/search
- * params: { q?, title?, genre?, person?, page?, limit? }
- * -> { data: Movie[], pagination }
- */
+
+
+
+
+export async function getTopRatedMovies(params = {}) {
+  const res = await apiFetch(`/movies/top-rated${buildQuery(params)}`)
+  return res?.data || []
+}
 export async function searchMovies(params = {}) {
   const res = await apiFetch(`/movies/search${buildQuery(params)}`)
   return {
@@ -35,13 +38,6 @@ export async function searchMovies(params = {}) {
     pagination: res?.pagination || null,
   }
 }
-
-
-export async function getTopRatedMovies(params = {}) {
-  const res = await apiFetch(`/movies/top-rated${buildQuery(params)}`)
-  return res?.data || []
-}
-
 
 export async function getMostPopularMovies(params = {}) {
   const res = await apiFetch(`/movies/most-popular${buildQuery(params)}`)
