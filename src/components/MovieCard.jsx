@@ -123,7 +123,7 @@ export default function MovieCard({ movie, compact = false }) {
         </div>
       </Link>
 
-      {/* Nút tim favourite – không điều hướng khi click */}
+      {}
       <button
         type="button"
         onClick={(e) => {
