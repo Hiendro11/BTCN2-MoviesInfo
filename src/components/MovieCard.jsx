@@ -42,7 +42,7 @@ export default function MovieCard({ movie, compact = false }) {
         ${hoverClasses}
       `}
     >
-      {/* Toàn bộ card (trừ nút tim) là Link sang chi tiết */}
+      {}
       <Link to={`/movie/${movie.id}`} className="block">
         <div className={`relative ${aspect}`}>
           {/* Poster */}
@@ -86,7 +86,7 @@ export default function MovieCard({ movie, compact = false }) {
               {movie.title}
             </h3>
 
-            {/* Dòng thông tin năm + thể loại + rating */}
+            {}
             <div className="mt-1 flex flex-wrap items-center gap-1 text-[11px] text-slate-200">
               {year && <span className="opacity-90">{year}</span>}
 
