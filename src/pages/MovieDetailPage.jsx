@@ -31,7 +31,6 @@ export default function MovieDetailPage() {
   const { favourites, toggleFavourite } = useFavourites()
   const isFav = favourites.some((m) => m.id === id)
 
-  // Detail
   useEffect(() => {
     let ignore = false
 
@@ -62,7 +61,6 @@ export default function MovieDetailPage() {
     }
   }, [id])
 
-  // Reviews
   useEffect(() => {
     let ignore = false
     async function loadReviews() {
