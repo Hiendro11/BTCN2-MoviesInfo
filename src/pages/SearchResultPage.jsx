@@ -1,4 +1,3 @@
-// src/pages/SearchResultPage.jsx
 import React, { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { searchMovies } from '../api/movies'
@@ -8,7 +7,7 @@ export default function SearchResultPage() {
   const [searchParams] = useSearchParams()
   const query = searchParams.get('q') || ''
 
-  const [mode, setMode] = useState('title') // title | person | genre | q
+  const [mode, setMode] = useState('title') 
   const [page, setPage] = useState(1)
   const [state, setState] = useState({
     loading: false,
